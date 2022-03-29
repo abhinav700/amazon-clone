@@ -1,0 +1,30 @@
+.BasketProduct{
+    display: flex;
+    height:150px;   
+    margin:15px 0px;
+    background-color: white;
+}
+.BasketProduct__title{
+    font-weight: 700;
+}
+.BasketProduct__image{
+    width:250px;
+    object-fit: contain;
+    margin: 5px 5px;
+}
+.BasketProduct__rating{
+    display: flex;
+    font-size: small;
+    width:80%;
+}
+
+.BasketProduct__leftPart{
+    display: flex;
+    flex-direction: column;
+}
+
+
+button{
+    height: fit-content;
+    margin-top: 10px;
+}

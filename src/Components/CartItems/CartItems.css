@@ -1,0 +1,9 @@
+.CartItems{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    height: max-content;
+}
+.Cartitems__leftPart{
+    width:90%;
+}

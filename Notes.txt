@@ -1,0 +1,6 @@
+1)While creating HTML and reactJS projects,it is 
+  optimal to use BAM naming convention
+
+2) when creating a function or an action,it is 
+   a good practice to display it on console using 
+   console.log for debugging it easily

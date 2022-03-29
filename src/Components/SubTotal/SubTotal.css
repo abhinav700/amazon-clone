@@ -1,0 +1,19 @@
+.subTotal{
+    display:flex ;
+    flex-direction: column;
+    width: 250px;
+    height:110px;
+    background-color: rgb(253, 216, 92);
+    margin: 45px 20px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: space-around;
+}
+.subTotal__gift{
+    display: flex;
+    align-items: center;
+}
+
+.subTotal__proceed{
+    background-color: rgb(255, 166, 0);
+}

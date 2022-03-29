@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(239, 239, 240);
+}
+.home__image{
+    width:100%;
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0.5));
+    z-index: -1;
+    opacity:0.8;
+    margin-bottom: -100px;
+}
+.home__row{
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    justify-content:space-between;
+}
+@media only screen and (max-width:515px) {
+    .home__row{
+        flex-wrap: wrap;
+    }
+
+    .home__image{
+        margin-bottom: -40px;
+    }
+  }
