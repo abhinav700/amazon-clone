@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { auth } from "./firebase.js";
+import { auth } from "../firebase.js";
 import path from "../../utilities/amazonLogo.png";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";

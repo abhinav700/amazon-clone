@@ -5,9 +5,17 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import "./Header.css";
 import { useStateValue } from "../StateProvider";
+import {auth} from "../firebase"
 const Header = () => {
-  const [{basket}]=useStateValue();
+  const [{basket,user}]=useStateValue();
+  
   console.log(basket)
+  const login=()=>{
+     if(user)
+     {
+       auth.signOut();
+     }
+  }
   return (
   
     <div>
@@ -26,10 +34,10 @@ const Header = () => {
         {/* right part of the navbar */}
         {/* 3 Links */}
         <div className="header__rightPart">
-          <Link to="/login" className="header__link">
+          <Link onClick={login} to={user && "/login"} className="header__link">
             <div className="header__item">
               <span className="header__item__option1">Hello Abhinav</span>
-              <span className="header__item__option2">Sign in</span>
+              <span className="header__item__option2">{user?"Sign Out":"Sign in"}</span>
             </div>
           </Link>
 
@@ -57,7 +65,7 @@ const Header = () => {
                 {/* we have added "?" after basket because it takes a small time to declare and assign variables
                   so it will treat basket as unassigned in case the variable is not loaded.
                    */}
-                <span className="header__basket__itemsCount">{basket?.length}</span>
+                <span className="header__basket__itemsCount" style={{textDecoration:"none"}}>{basket?.length}</span>
             </div>
           </Link>
         </div>

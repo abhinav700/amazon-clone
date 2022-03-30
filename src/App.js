@@ -6,11 +6,11 @@ import Home from "./Components/Home/Home";
 import CartItems from "./Components/CartItems/Cartitems";
 import Login from "./Components/Login/Login";
 import { useStateValue } from "./Components/StateProvider";
-import { auth } from "./Components/Login/firebase";
+import { auth } from "./Components/firebase";
 //generally app file should not be doing much. It should be used for routing and high
 //level work
 function App() {
-  const [{user},{ basket }, dispatch] = useStateValue();
+  const [{basket,user }, dispatch] = useStateValue();
 
   useEffect(() => {
     //putting basket inside [] will make it run when component is loaded and everytime
