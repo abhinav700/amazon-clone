@@ -10,7 +10,7 @@ import { auth } from "./Components/Login/firebase";
 //generally app file should not be doing much. It should be used for routing and high
 //level work
 function App() {
-  const [{user},{ basket }, dispatch] = useStateValue();
+  const [{user, basket }, dispatch] = useStateValue();
 
   useEffect(() => {
     //putting basket inside [] will make it run when component is loaded and everytime
